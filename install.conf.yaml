@@ -1,0 +1,19 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    # zsh
+    ~/.zshrc:
+      path: dotfiles/zsh/zshrc
+    ~/.zsh/rc/aliases.zshrc:
+      path: dotfiles/zsh/aliases.zshrc
+      create: true
+    ~/.zsh/rc/zplug.zshrc:
+      path: dotfiles/zsh/zplug.zshrc
+      create: true
+
+- create:
+    ~/.zsh/rc:

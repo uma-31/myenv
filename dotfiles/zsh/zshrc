@@ -1,0 +1,17 @@
+# enable autocomplete
+autoload -Uz compinit && compinit
+
+# setup anyenv
+export ANYENV_ROOT="$HOME/.anyenv"
+export PATH="$ANYENV_ROOT/bin:$PATH"
+
+eval "$(anyenv init -)"
+
+# load other scripts
+ZSHRC_DIR="$HOME/.zsh/rc"
+
+if [[ ! -z "$(ls $ZSHRC_DIR)" ]]; then
+    for rc_file in $ZSHRC_DIR/*; do
+        source $rc_file
+    done
+fi
