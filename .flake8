@@ -1,0 +1,6 @@
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    dotbot
+max-line-length = 88
