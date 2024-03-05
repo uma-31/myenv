@@ -48,13 +48,6 @@ class DictParser(Generic[T], BaseConfigParser[T]):
                 f"This field must be a dictionary (got {got_type_name})"
             )
 
-        target_conf_keys = set(
-            [
-                *map(self.__py_key_to_conf_key, self.__value_parsers.keys()),
-                *cast(_AnyDict, data).keys(),
-            ]
-        )
-
         has_error = False
         error_reason = ""
 
@@ -67,8 +60,8 @@ class DictParser(Generic[T], BaseConfigParser[T]):
                 f"{reason}\n" if reason.startswith("-") else f"- {reason}\n",
             )
 
-        for conf_key in target_conf_keys:
-            py_key = self.__conf_key_to_py_key(conf_key)
+        for py_key in self.__value_parsers.keys():
+            conf_key = self.__py_key_to_conf_key(py_key)
 
             if py_key not in self.__value_parsers:
                 add_error_reason(conf_key, "Unrecognized field")
