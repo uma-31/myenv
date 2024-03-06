@@ -17,9 +17,7 @@ def clone(repo: str, dir: str) -> bool:
         return False
 
     subprocess.run(
-        ["git", "clone", repo_url, str(dir_path)],
-        stderr=subprocess.DEVNULL,
-        stdout=subprocess.DEVNULL,
+        ["git", "clone", "-q", repo_url, str(dir_path)],
         check=True,
     )
     return True

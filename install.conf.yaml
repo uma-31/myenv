@@ -2,7 +2,41 @@
     link:
       relink: true
 
-- clean: ["~"]
+- clean:
+    ~/:
+      force: true
+
+- create:
+    ~/.zsh/rc:
+
+- pkg-install:
+    pkgs:
+      - direnv
+      - gh
+      - jq
+      - peco
+      - pipx
+      - tree
+      - vim
+      - zsh
+    priority: apt-get
+
+- anyenv-install:
+    setup-anyenv: true
+    anyenvs:
+      - pyenv
+      - nodenv
+
+- git-clone:
+    - repo: zplug/zplug
+      dir: ~/.zplug
+
+- shell:
+    - command: chsh -s $(which zsh)
+      description: Making zsh the default shell
+      stdin: true
+      stdout: true
+      stderr: true
 
 - link:
     # zsh
@@ -14,6 +48,3 @@
     ~/.zsh/rc/zplug.zshrc:
       path: dotfiles/zsh/zplug.zshrc
       create: true
-
-- create:
-    ~/.zsh/rc:

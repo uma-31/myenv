@@ -15,6 +15,6 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 PYTHONPATH="$BASEDIR/packages/dotbot_plugins" "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" \
     --base-directory "${BASEDIR}" \
     --config-file "${CONFIG}" \
-    --plugin plugins.py \
+    --plugin packages/dotbot_plugins/plugins.py \
     --verbose \
     "${@}"
