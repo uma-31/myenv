@@ -42,8 +42,8 @@ Git clone plugins specified as a list of dictionaries with the following paramet
 
 ```yaml
 - git-clone
-    - repo: uma-31/dotfiles
-      dir: ~/.dotfiles
+    - repo: uma-31/myenv
+      dir: ~/.myenv
 ```
 
 ### Package Install
