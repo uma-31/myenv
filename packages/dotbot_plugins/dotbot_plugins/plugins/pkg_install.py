@@ -43,7 +43,7 @@ class PkgInstall(DotbotPluginBase[_PkgInstallConfig]):
         if pkg_manager == "apt-get":
             result = subprocess.run(["sudo", "apt-get", "-qq", "-y", "update"])
         elif pkg_manager == "brew":
-            result = subprocess.run(["brew", "-q", "update"])
+            result = subprocess.run(["brew", "update", "-q"])
         else:
             raise ValueError(f"Unknown package manager: {pkg_manager}")
 
@@ -53,7 +53,7 @@ class PkgInstall(DotbotPluginBase[_PkgInstallConfig]):
         if pkg_manager == "apt-get":
             result = subprocess.run(["sudo", "apt-get", "-qq", "-y", "install", pkg])
         elif pkg_manager == "brew":
-            result = subprocess.run(["brew", "-q", "install", pkg])
+            result = subprocess.run(["brew", "install", "-q", pkg])
         else:
             raise ValueError(f"Unknown package manager: {pkg_manager}")
 
