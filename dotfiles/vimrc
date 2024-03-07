@@ -1,0 +1,47 @@
+"----------"
+" Settings "
+"----------"
+
+set title
+
+" Editor
+set number
+set cursorline
+set display=lastline
+set showmatch matchtime=1
+
+syntax enable
+
+set smartindent
+set clipboard+=unnamed
+
+nnoremap Y y$
+
+" Command Line
+set hlsearch
+set incsearch
+
+set wildmenu
+
+"---------"
+" Plugins "
+"---------"
+
+call plug#begin()
+
+" File System Explorer
+Plug 'preservim/nerdtree'
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists('s:std_in') | wincmd p | endif
+
+" Status Line (vim-airline)
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+
+let g:airline#extensions#tabline#formatter='default'
+
+call plug#end()
