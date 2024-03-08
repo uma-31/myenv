@@ -32,7 +32,12 @@
       dir: ~/.zplug
 
 - shell:
-    - command: chsh -s $(which zsh)
+    - command: |-
+        if [[ "$SHELL" =~ zsh ]]; then
+          echo "Skipping login shell change, already using zsh."
+        else
+          chsh -s $(which zsh)
+        fi
       description: Making zsh the default shell
       stdin: true
       stdout: true
