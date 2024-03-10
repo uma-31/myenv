@@ -28,6 +28,7 @@
 
 - pkg-install:
     pkgs:
+      - bat
       - curl
       - direnv
       - fzf
