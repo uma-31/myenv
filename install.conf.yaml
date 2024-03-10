@@ -34,16 +34,6 @@
 
 - shell:
     - command: |-
-        if [[ "$SHELL" =~ zsh ]]; then
-          echo "Skipping login shell change, already using zsh."
-        else
-          chsh -s $(which zsh)
-        fi
-      description: Making zsh the default shell
-      stdin: true
-      stdout: true
-      stderr: true
-    - command: |-
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
       description: Installing vim-plug

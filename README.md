@@ -24,4 +24,7 @@ $ brew install python3
 
 ```bash
 $ ~/.myenv/install.sh
+
+# Change the login shell to zsh when you run the script for the first time
+$ chsh -s $(which zsh)
 ```
