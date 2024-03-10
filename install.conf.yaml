@@ -58,3 +58,5 @@
       description: Installing vim-plug
     - command: ./scripts/install-atuin.sh
       description: Installing atuin
+    - command: ./scripts/install-lazydocker.sh
+      description: Installing lazydocker
