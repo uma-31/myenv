@@ -18,3 +18,4 @@ runs:
         pipx ensurepath
 
         pipx install poetry
+      shell: bash

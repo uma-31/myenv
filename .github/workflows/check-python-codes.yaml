@@ -2,6 +2,10 @@ name: Check Python Codes
 
 on: [push, pull_request]
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   style-check:
     name: Style Check
