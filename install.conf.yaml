@@ -11,6 +11,7 @@
 
 - pkg-install:
     pkgs:
+      - curl
       - direnv
       - gh
       - jq
