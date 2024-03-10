@@ -7,6 +7,9 @@ export PATH="$ANYENV_ROOT/bin:$PATH"
 
 eval "$(anyenv init -)"
 
+# direnv
+eval "$(direnv hook zsh)"
+
 # load other scripts
 ZSHRC_DIR="$HOME/.zsh/rc"
 
