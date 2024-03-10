@@ -30,12 +30,14 @@
     pkgs:
       - curl
       - direnv
+      - fzf
       - gh
       - jq
       - peco
       - pipx
       - tree
       - vim
+      - zoxide
       - zsh
     priority: apt-get
 
