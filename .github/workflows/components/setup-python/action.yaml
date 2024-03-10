@@ -1,0 +1,20 @@
+name: Set Up Python and Poetry
+
+inputs:
+  python-version:
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Set Up Python ${{ inputs.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install Poetry
+      run: |
+        pip install --user pipx
+        pipx ensurepath
+
+        pipx install poetry

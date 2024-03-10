@@ -1,0 +1,24 @@
+name: Check Python Codes
+
+on: [push, pull_request]
+
+jobs:
+  style-check:
+    name: Style Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set Up Python 3.12
+        uses: ./.github/workflows/components/setup-python
+        with:
+          python-version: 3.12
+
+      - name: Install Root Dependencies
+        run: poetry install
+
+      - name: Lint with Flake8
+        run: poetry run flake8
+
+      - name: Check Formatting with Black
+        run: poetry run black --check --verbose .
