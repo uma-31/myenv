@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GID: ${GID:-1000}
+        UID: ${UID:-1000}
+    volumes:
+      - type: bind
+        source: .
+        target: /home/developer/myenv
+    tty: true
