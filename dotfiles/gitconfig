@@ -1,0 +1,24 @@
+[core]
+	editor = vim
+
+[user]
+	name = uMa
+	email = ysmst35@gmail.com
+
+[init]
+	defaultBranch = master
+
+[alias]
+	a  = add
+	b  = branch
+	c  = commit
+	cm = commit -m
+	ca = commit --amend
+	cp = cherry-pick
+	d  = diff
+	f  = fetch
+	l  = log --oneline
+	r  = rebase
+	s  = status
+	st = stash
+	sw = switch
