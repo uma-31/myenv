@@ -59,3 +59,5 @@
       description: Installing atuin
     - command: ./scripts/install-lazydocker.sh
       description: Installing lazydocker
+    - command: ./scripts/install-zoxide.sh
+      description: Installing zoxide
