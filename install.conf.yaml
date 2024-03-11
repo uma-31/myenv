@@ -25,6 +25,10 @@
     # vim
     ~/.vimrc:
       path: dotfiles/vimrc
+    # lazydocker
+    ~/.config/lazydocker/config.yml:
+      path: dotfiles/lazydocker-config.yml
+      create: true
 
 - pkg-install:
     pkgs:
