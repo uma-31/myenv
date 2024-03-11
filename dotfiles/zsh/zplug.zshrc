@@ -10,6 +10,8 @@ zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 
+zplug 'wfxr/forgit'
+
 # install plugins if not installed
 if ! zplug check; then
  zplug install
