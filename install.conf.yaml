@@ -55,6 +55,8 @@
 - shell:
     - command: ./scripts/install-vim-plug.sh
       description: Installing vim-plug
+    - command: ./scripts/install-vim-colors-solarized.sh
+      description: Installing solarized colors for vim
     - command: ./scripts/install-atuin.sh
       description: Installing atuin
     - command: ./scripts/install-lazydocker.sh
