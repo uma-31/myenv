@@ -1,6 +1,9 @@
 # enable autocomplete
 autoload -Uz compinit && compinit
 
+# local bin
+export PATH="$HOME/.local/bin:$PATH"
+
 # setup anyenv
 export ANYENV_ROOT="$HOME/.anyenv"
 export PATH="$ANYENV_ROOT/bin:$PATH"

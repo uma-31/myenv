@@ -39,7 +39,6 @@
       - pipx
       - tree
       - vim
-      - zoxide
       - zsh
     priority: apt-get
 
