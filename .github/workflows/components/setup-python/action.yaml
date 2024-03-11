@@ -1,7 +1,9 @@
 name: Set Up Python and Poetry
+description: Set up specified Python version and install Poetry by using pipx
 
 inputs:
   python-version:
+    description: The version of Python to set up
     required: true
 
 runs:
