@@ -42,6 +42,7 @@
       - jq
       - peco
       - pipx
+      - ripgrep
       - tree
       - vim
       - zsh
