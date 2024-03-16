@@ -1,5 +1,5 @@
 alias c='clear'
-alias ls='ls --color=always'
+alias ls='exa'
 alias lzd='lazydocker'
 alias tm='glances'
 
