@@ -1,0 +1,7 @@
+Include ~/.ssh/local-config
+
+# GitHub
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github_id_ed25519

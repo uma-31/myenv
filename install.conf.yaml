@@ -29,6 +29,10 @@
     ~/.config/lazydocker/config.yml:
       path: dotfiles/lazydocker-config.yml
       create: true
+    # ssh
+    ~/.ssh/config:
+      path: dotfiles/ssh-config
+      create: true
 
 - pkg-install:
     pkgs:
@@ -59,6 +63,10 @@
       dir: ~/.zplug
 
 - shell:
+    # Creating files
+    - command: touch ~/.ssh/local-config
+      description: Creating local ssh config
+    # Running install scripts
     - command: ./scripts/install-vim-plug.sh
       description: Installing vim-plug
     - command: ./scripts/install-vim-colors-solarized.sh
