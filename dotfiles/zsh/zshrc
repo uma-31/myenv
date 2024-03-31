@@ -10,15 +10,6 @@ export PATH="$ANYENV_ROOT/bin:$PATH"
 
 eval "$(anyenv init -)"
 
-# direnv
-eval "$(direnv hook zsh)"
-
-# atuin
-eval "$(atuin init zsh)"
-
-# zoxide
-eval "$(zoxide init zsh)"
-
 # load other scripts
 ZSHRC_DIR="$HOME/.zsh/rc"
 
