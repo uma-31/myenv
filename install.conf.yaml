@@ -43,6 +43,7 @@
       - fzf
       - glances
       - gh
+      - imagemagick
       - jq
       - make
       - peco
