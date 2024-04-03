@@ -39,7 +39,7 @@
       - bat
       - curl
       - direnv
-      - exa
+      - eza
       - fzf
       - glances
       - gh
