@@ -1,0 +1,61 @@
+- defaults:
+    link:
+      relink: true
+
+- clean:
+    ~/:
+      force: true
+
+- create:
+    ~/.zsh/rc:
+
+- link:
+    # zsh
+    ~/.zshrc:
+      path: dotfiles/zsh/zshrc
+    ~/.zsh/rc/aliases.zshrc:
+      path: dotfiles/zsh/aliases.zshrc
+      create: true
+    ~/.zsh/rc/zplug.zshrc:
+      path: dotfiles/zsh/zplug.zshrc
+      create: true
+    # git
+    ~/.gitconfig:
+      path: dotfiles/gitconfig
+    # vim
+    ~/.vimrc:
+      path: dotfiles/vimrc
+
+- pkg-install:
+    pkgs:
+      - bat
+      - curl
+      - direnv
+      - eza
+      - fzf
+      - gh
+      - httpie
+      - jq
+      - make
+      - peco
+      - ripgrep
+      - tree
+      - vim
+      - wget
+      - zsh
+    priority: apt-get
+
+- git-clone:
+    - repo: zplug/zplug
+      dir: ~/.zplug
+
+- shell:
+    # Running install scripts
+    - command: ./scripts/install-vim-plug.sh
+      description: Installing vim-plug
+    - command: ./scripts/install-vim-colors-solarized.sh
+      description: Installing solarized colors for vim
+    - command: ./scripts/install-atuin.sh
+      description: Installing atuin
+    - command: ./scripts/install-zoxide.sh
+      description: Installing zoxide

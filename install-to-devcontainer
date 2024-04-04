@@ -10,4 +10,4 @@ if [ -f "$HOME/.zshrc" ]; then
     rm "$HOME/.zshrc"
 fi
 
-"${BASEDIR}/install"
+DOTBOT_INSTALL_CONFIG="install-to-devcontainer.conf.yaml" "${BASEDIR}/install"
