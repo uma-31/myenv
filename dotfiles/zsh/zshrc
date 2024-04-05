@@ -4,11 +4,13 @@ autoload -Uz compinit && compinit
 # local bin
 export PATH="$HOME/.local/bin:$PATH"
 
-# setup anyenv
-export ANYENV_ROOT="$HOME/.anyenv"
-export PATH="$ANYENV_ROOT/bin:$PATH"
+# setup anyenv if it exists
+if [ -d "$HOME/.anyenv" ]; then
+    export ANYENV_ROOT="$HOME/.anyenv"
+    export PATH="$ANYENV_ROOT/bin:$PATH"
 
-eval "$(anyenv init -)"
+    eval "$(anyenv init -)"
+fi
 
 # load other scripts
 ZSHRC_DIR="$HOME/.zsh/rc"
