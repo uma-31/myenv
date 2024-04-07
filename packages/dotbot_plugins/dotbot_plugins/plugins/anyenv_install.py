@@ -51,6 +51,11 @@ class AnyenvInstall(DotbotPluginBase[_AnyenvInstallConfig]):
                 self.logger.error("Failed to install anyenv. Aborting...")
                 return False
 
+            try:
+                git.clone("znz/anyenv-update", "~/.anyenv/plugins/anyenv-update")
+            except Exception:
+                self.logger.warn("Failed to install anyenv-update.")
+
             if not anyenv_cloned:
                 self.logger.info("Skip installing anyenv (already installed)")
             if not anyenv_install_cloned:
