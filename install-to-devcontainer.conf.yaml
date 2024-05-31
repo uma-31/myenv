@@ -7,10 +7,13 @@
       force: true
 
 - create:
+    ~/.zsh/env:
     ~/.zsh/rc:
 
 - link:
     # zsh
+    ~/.zshenv:
+      path: dotfiles/zsh/zshenv
     ~/.zshrc:
       path: dotfiles/zsh/zshrc
     ~/.zsh/rc/aliases.zshrc:
