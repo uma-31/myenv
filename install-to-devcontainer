@@ -6,6 +6,11 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
 
+if command -v apt; then
+    sudo apt update
+    sudo apt install -y python3
+fi
+
 if [ -f "$HOME/.zshrc" ]; then
     rm "$HOME/.zshrc"
 fi
