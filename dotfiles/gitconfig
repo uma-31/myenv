@@ -6,7 +6,7 @@
 	email = ysmst35@gmail.com
 
 [init]
-	defaultBranch = master
+	defaultBranch = main
 
 [alias]
 	a  = add
