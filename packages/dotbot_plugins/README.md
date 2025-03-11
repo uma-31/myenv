@@ -41,7 +41,7 @@ Git clone plugins specified as a list of dictionaries with the following paramet
 #### Example
 
 ```yaml
-- git-clone
+- git-clone:
     - repo: uma-31/myenv
       dir: ~/.myenv
 ```
