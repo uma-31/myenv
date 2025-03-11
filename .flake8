@@ -4,3 +4,4 @@ exclude =
     __pycache__,
     dotbot
 max-line-length = 88
+extend-ignore = E203,E701
