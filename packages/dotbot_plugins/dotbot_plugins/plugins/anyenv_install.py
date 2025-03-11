@@ -1,6 +1,6 @@
 import subprocess
 
-from dotbot.context import Context  # type: ignore
+from dotbot.context import Context
 from typing import List, TypedDict
 
 

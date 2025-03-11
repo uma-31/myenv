@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Any, TypeVar, Generic
 
-from dotbot import Plugin  # type: ignore
-from dotbot.context import Context  # type: ignore
-from dotbot.messenger import Messenger  # type: ignore
+from dotbot import Plugin
+from dotbot.context import Context
+from dotbot.messenger import Messenger
 
 from ..config_parsers import BaseConfigParser, ConfigParsingError
 
@@ -23,13 +23,13 @@ class _LoggerWrapper:
         return self.__name
 
     def info(self, message: str) -> None:
-        self.__logger.info(f"[{self.name}] {message}")  # type: ignore
+        self.__logger.info(f"[{self.name}] {message}")
 
     def warn(self, message: str) -> None:
-        self.__logger.warning(f"[{self.name}] {message}")  # type: ignore
+        self.__logger.warning(f"[{self.name}] {message}")
 
     def error(self, message: str) -> None:
-        self.__logger.error(f"[{self.name}] {message}")  # type: ignore
+        self.__logger.error(f"[{self.name}] {message}")
 
 
 class DotbotPluginBase(ABC, Generic[T], Plugin):

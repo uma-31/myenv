@@ -1,6 +1,6 @@
 from typing import List, TypedDict, cast
 
-from dotbot.context import Context  # type: ignore
+from dotbot.context import Context
 
 from .base import DotbotPluginBase
 from ..utils import git
