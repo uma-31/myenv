@@ -1,3 +1,3 @@
-from .plugins import AnyenvInstall, GitClone, PkgInstall
+from .plugins import GitClone, PkgInstall
 
-__all__ = ["AnyenvInstall", "GitClone", "PkgInstall"]
+__all__ = ["GitClone", "PkgInstall"]

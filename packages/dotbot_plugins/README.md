@@ -4,27 +4,6 @@ This directory contains my custom Dotbot plugins.
 
 ## Plugins
 
-### Anyenv Install
-
-Install \*\*env by anyenv. This plugin can also install the anyenv.
-
-#### Format
-
-| Parameter      | Explanation                              |
-| -------------- | ---------------------------------------- |
-| `setup-anyenv` | If true, install anyenv. (default: true) |
-| `anyenvs`      | List of \*\*envs to install.             |
-
-#### Example
-
-```yaml
-- anyenv:
-    - setup-anyenv: true
-    - anyenvs:
-        - pyenv
-        - nodenv
-```
-
 ### Git Clone
 
 Clone git repositories.

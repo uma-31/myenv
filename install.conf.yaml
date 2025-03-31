@@ -59,12 +59,6 @@
       - zsh
     priority: apt-get
 
-- anyenv-install:
-    setup-anyenv: true
-    anyenvs:
-      - pyenv
-      - nodenv
-
 - git-clone:
     - repo: zplug/zplug
       dir: ~/.zplug
@@ -88,5 +82,3 @@
       description: Installing GitKraken CLI
     - command: ./scripts/install-eza.sh
       description: Installing eza
-    - command: ./scripts/install-pyenv-dependencies.sh
-      description: Installing pyenv dependencies
