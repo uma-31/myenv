@@ -1,11 +1,43 @@
-# enable autocomplete
-autoload -Uz compinit && compinit
+# setup zplug
+export ZPLUG_ROOT="${HOME}/.zplug"
+
+source "${ZPLUG_ROOT}/init.zsh"
+
+# theme
+zplug 'agnoster/agnoster-zsh-theme', as:theme
+
+# general zplug plugins
+zplug 'zsh-users/zsh-completions'
+zplug 'zsh-users/zsh-autosuggestions'
+zplug 'zsh-users/zsh-syntax-highlighting', defer:2
+
+zplug 'wfxr/forgit'
+zplug 'plugins/catimg', from:oh-my-zsh
+zplug 'plugins/direnv', from:oh-my-zsh
+zplug 'plugins/ssh-agent', from:oh-my-zsh
+zplug 'plugins/zoxide', from:oh-my-zsh
+
+# setup tools
+source "$(atuin init zsh)"
 
 # load other scripts
-ZSHRC_DIR="$HOME/.zsh/rc"
+declare zshrc_dir="$HOME/.zsh/rc"
 
-if [[ ! -z "$(ls $ZSHRC_DIR)" ]]; then
-    for rc_file in $ZSHRC_DIR/*; do
-        source $rc_file
+if [[ -d "${zshrc_dir}" ]]; then
+    declare -a rc_files
+    readarray rc_files < <(find "${zshrc_dir}" -type f,l)
+
+    for rc_file in "${rc_files[@]}"; do
+        source "${rc_file}"
     done
 fi
+
+# install and load plugins
+if ! zplug check; then
+    zplug install
+fi
+
+zplug load
+
+# enable autocomplete
+autoload -Uz compinit && compinit
