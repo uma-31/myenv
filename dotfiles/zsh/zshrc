@@ -28,9 +28,6 @@ if [[ -d "${zshrc_dir}" ]]; then
     done
 fi
 
-# setup tools
-eval "$(atuin init zsh)"
-
 # install and load plugins
 if ! zplug check; then
     zplug install
