@@ -21,8 +21,7 @@ zplug 'plugins/zoxide', from:oh-my-zsh
 declare zshrc_dir="$HOME/.zsh/rc"
 
 if [[ -d "${zshrc_dir}" ]]; then
-    declare -a rc_files
-    readarray rc_files < <(find "${zshrc_dir}" -type f,l)
+    rc_files=($(find "${zshrc_dir}" -type f -or -type l))
 
     for rc_file in "${rc_files[@]}"; do
         source "${rc_file}"
@@ -30,7 +29,7 @@ if [[ -d "${zshrc_dir}" ]]; then
 fi
 
 # setup tools
-source "$(atuin init zsh)"
+eval "$(atuin init zsh)"
 
 # install and load plugins
 if ! zplug check; then
