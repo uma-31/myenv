@@ -17,9 +17,6 @@ zplug 'plugins/direnv', from:oh-my-zsh
 zplug 'plugins/ssh-agent', from:oh-my-zsh
 zplug 'plugins/zoxide', from:oh-my-zsh
 
-# setup tools
-source "$(atuin init zsh)"
-
 # load other scripts
 declare zshrc_dir="$HOME/.zsh/rc"
 
@@ -31,6 +28,9 @@ if [[ -d "${zshrc_dir}" ]]; then
         source "${rc_file}"
     done
 fi
+
+# setup tools
+source "$(atuin init zsh)"
 
 # install and load plugins
 if ! zplug check; then
