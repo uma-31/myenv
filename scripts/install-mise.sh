@@ -20,3 +20,8 @@ else
     echo "Unsupported OS"
     exit 1
 fi
+
+cat >~/.zsh/rc/mise.zsh <<'EOS'
+eval "$(mise activate zsh)"
+eval "$(mise activate zsh --shims)"
+EOS
