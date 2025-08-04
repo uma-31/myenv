@@ -23,5 +23,8 @@ fi
 
 cat >~/.zsh/rc/mise.zsh <<'EOS'
 eval "$(mise activate zsh)"
+EOS
+
+cat >~/.zprofile <<'EOS'
 eval "$(mise activate zsh --shims)"
 EOS
