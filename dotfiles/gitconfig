@@ -23,6 +23,3 @@
 	s  = status
 	st = stash
 	sw = switch
-
-[url "git@github.com:"]
-	insteadOf = https://github.com
