@@ -75,8 +75,6 @@
       description: Installing lazydocker
     - command: ./scripts/install-zoxide.sh
       description: Installing zoxide
-    - command: ./scripts/install-gitkraken-cli.sh
-      description: Installing GitKraken CLI
     - command: ./scripts/install-eza.sh
       description: Installing eza
     - command: ./scripts/install-mise.sh
