@@ -1,0 +1,4 @@
+[".zplug"]
+type = "git-repo"
+url = "https://github.com/zplug/zplug"
+refreshPeriod = "168h"

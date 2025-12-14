@@ -1,0 +1,51 @@
+# setup zplug
+export ZPLUG_ROOT="${HOME}/.zplug"
+
+source "${ZPLUG_ROOT}/init.zsh"
+
+# theme
+zplug 'agnoster/agnoster-zsh-theme', as:theme
+
+# zsh-users plugins
+zplug 'zsh-users/zsh-autosuggestions'
+zplug 'zsh-users/zsh-completions'
+zplug 'zsh-users/zsh-syntax-highlighting', defer:2
+
+# oh-my-zsh plugins
+zplug 'plugins/eza', from:oh-my-zsh
+zplug 'plugins/direnv', from:oh-my-zsh
+zplug 'plugins/ssh', from:oh-my-zsh
+zplug 'plugins/ssh-agent', from:oh-my-zsh
+zplug 'plugins/zoxide', from:oh-my-zsh
+
+# other plugins
+zplug 'wfxr/forgit'
+
+# mise activation
+eval "$(mise activate zsh)"
+
+# load other scripts
+declare zshrc_dir="$HOME/.zsh/rc"
+if [[ ! -f "$HOME/.zsh/completions/_mise" ]]; then
+    echo "Mise completion not found. Generating..."
+    mkdir -p "$HOME/.zsh/completions/"
+    mise completion zsh > "$HOME/.zsh/completions/_mise"
+    echo "Mise completion generated."
+fi
+
+if [[ -d "${zshrc_dir}" ]]; then
+    while IFS=$'\n' read file; do
+        source "${file}"
+    done < <(find "${zshrc_dir}" -type f -or -type l)
+fi
+
+# install and load plugins
+if ! zplug check; then
+    zplug install
+fi
+
+zplug load
+
+# enable autocomplete
+fpath+=("$HOME/.zsh/completions")
+autoload -Uz compinit && compinit
