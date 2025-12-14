@@ -1,0 +1,7 @@
+[tools]
+atuin = "latest"
+chezmoi = "latest"
+eza = "latest"
+lazydocker = "latest"
+usage = "latest"
+zoxide = "latest"
