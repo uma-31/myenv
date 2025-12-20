@@ -1,0 +1,10 @@
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+
+[user]
+	name = uMa
+	email = ysmst35@gmail.com
+
+[init]
+	defaultBranch = main
