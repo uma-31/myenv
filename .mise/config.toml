@@ -1,0 +1,6 @@
+[env]
+MYENV_TEST__ROOT = "{{config_root}}/test"
+MYENV_TEST__GITEA_PORT = "3000"
+MYENV_TEST__GITEA_USER = "myenv"
+MYENV_TEST__GITEA_PASS = "password"
+MYENV_TEST__REPO_NAME = "myenv"
