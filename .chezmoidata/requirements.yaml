@@ -1,0 +1,36 @@
+default:
+  requirements:
+    installation:
+      mac:
+        type: brew
+      ubuntu:
+        type: apt
+
+requirements:
+  - name: bat
+  - name: fzf
+  - name: gh
+  - name: glances
+  - name: gpg
+  - name: httpie
+  - name: jq
+  - name: make
+  - name: mise
+    installation:
+      mac:
+        type: brew
+      ubuntu:
+        type: apt-community
+        repository: https://mise.jdx.dev/deb
+        components:
+          - stable
+          - main
+        options:
+          gpg-key:
+            source: https://mise.jdx.dev/gpg-key.pub
+            dest: /etc/apt/keyrings/mise-archive-keyring.pub
+          arch: true
+  - name: peco
+  - name: tree
+  - name: vim
+  - name: zsh

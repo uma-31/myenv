@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+{{ template "utils.sh" . }}
+{{ template "package-installer.sh" . }}
+
+{{- $targetOS := .chezmoi.config.data.targetOS }}
+
+{{- if eq $targetOS "unknown" }}
+myenv_log_error "サポート対象外の OS です"
+exit 1
+{{- end }}
+
+myenv_log_info "パッケージをインストールします"
+
+{{- $aptPackages := list }}
+{{- $brewPackages := list }}
+
+{{- range .requirements }}
+{{-   $install := dict }}
+{{-   if hasKey . "installation" }}
+{{-     $install = index .installation $targetOS | default (index $.default.requirements.installation $targetOS) }}
+{{-   else }}
+{{-     $install = index $.default.requirements.installation $targetOS }}
+{{-   end }}
+{{-   if $install }}
+{{-     if eq $install.type "apt-community" }}
+add_apt_third_party_repository \
+    "{{ .name }}" \
+    "{{ $install.repository }}" \
+    "{{ join " " $install.components }}" \
+    "{{ (index $install.options "gpg-key").source }}" \
+    "{{ (index $install.options "gpg-key").dest }}" \
+    "{{ if $install.options.arch }}yes{{ else }}no{{ end }}"
+{{-       $aptPackages = append $aptPackages .name }}
+{{-     else if eq $install.type "apt" }}
+{{-       $aptPackages = append $aptPackages .name }}
+{{-     else if eq $install.type "brew" }}
+{{-       $brewPackages = append $brewPackages .name }}
+{{-     end }}
+{{-   end }}
+{{- end }}
+
+{{- if $aptPackages }}
+install_apt_packages {{ join " " $aptPackages }}
+{{- end }}
+
+{{- if $brewPackages }}
+install_brew_packages {{ join " " $brewPackages }}
+{{- end }}
+
+myenv_log_info "パッケージのインストールが完了しました"
