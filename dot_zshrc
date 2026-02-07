@@ -13,7 +13,6 @@ zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 
 # oh-my-zsh plugins
 zplug 'plugins/eza', from:oh-my-zsh
-zplug 'plugins/direnv', from:oh-my-zsh
 zplug 'plugins/ssh', from:oh-my-zsh
 zplug 'plugins/ssh-agent', from:oh-my-zsh
 zplug 'plugins/zoxide', from:oh-my-zsh
