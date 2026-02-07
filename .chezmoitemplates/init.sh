@@ -15,7 +15,7 @@ __remove_bootstrap_chezmoi() {
     fi
 
     myenv_log_info "ブートストラップ版の chezmoi を削除します: $chezmoi_bin"
-    rm -f "$chezmoi_bin"
+    sudo rm -f "$chezmoi_bin"
 }
 
 __install_mise_tools() {
