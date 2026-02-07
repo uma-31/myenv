@@ -42,5 +42,5 @@ myenv_init() {
     __install_mise_tools
     __setup_zsh_as_login_shell
 
-    myenv_log_info "セットアップが完了しました！${LF}シェルを再起動するか、次のコマンドを実行してください: exec \$SHELL"
+    myenv_log_info "セットアップが完了しました！${LF}シェルを再起動してください。"
 }
