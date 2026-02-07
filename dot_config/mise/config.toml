@@ -1,6 +1,7 @@
 [tools]
 atuin = "latest"
 chezmoi = "latest"
+claude-code = "latest"
 eza = "latest"
 lazydocker = "latest"
 usage = "latest"
