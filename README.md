@@ -4,7 +4,13 @@
 
 ## 前提条件
 
+### Mac / Linux
+
 - `git` コマンドが使用可能であること
+
+### Windows
+
+特になし
 
 ## 使い方
 
@@ -32,6 +38,8 @@ cd ~
 iex "&{$(irm 'https://get.chezmoi.io/ps1')} -- init https://github.com/uma-31/myenv.git"
 # 一時的にパスを通す
 $env:Path = $env:USERPROFILE + "\bin;" + $env:Path
+# 一時的に実行ポリシーを変更
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 # 反映
 chezmoi apply
 ```

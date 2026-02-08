@@ -4,4 +4,14 @@ README.md
 
 {{- if eq .chezmoi.os "windows" }}
 **/*
+
+!.chezmoiscripts/init.ps1
+!.config
+.config/*
+!.config/wezterm
+.config/wezterm/*
+!.config/wezterm/wezterm.lua
+!.ssh
+!.ssh/*
+!.gitconfig
 {{- end}}
