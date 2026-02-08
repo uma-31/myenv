@@ -32,5 +32,4 @@ requirements:
           arch: true
   - name: peco
   - name: tree
-  - name: vim
   - name: zsh
