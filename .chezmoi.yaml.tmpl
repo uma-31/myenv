@@ -1,6 +1,8 @@
 {{- $targetOS := "unknown" }}
 {{- if eq .chezmoi.os "darwin" }}
 {{-   $targetOS = "mac" }}
+{{- else if eq .chezmoi.os "windows" }}
+{{-   $targetOS = "windows" }}
 {{- else if eq (.chezmoi.osRelease.id | default "") "ubuntu" }}
 {{-   $targetOS = "ubuntu" }}
 {{- end }}
