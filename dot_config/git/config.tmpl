@@ -7,3 +7,12 @@
 
 [init]
 	defaultBranch = main
+
+[wt]
+	copy = "mise.local.toml"
+	copy = "mise.toml"
+	copy = "mise/"
+	copy = ".mise/"
+	copy = ".config/mise.toml"
+	copy = ".config/mise/"
+	hook = "~/.config/git/wt-hooks/post-create"
