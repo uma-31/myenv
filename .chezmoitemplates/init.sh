@@ -37,12 +37,20 @@ __setup_zsh_as_login_shell() {
 
 __setup_ssh_config() {
     local ssh_conf_dir="$HOME/.ssh/conf.d"
+    local github_key="$HOME/.ssh/id_ed25519_github"
 
-    myenv_log_info "SSH 設定用のディレクトリを作成します: $ssh_conf_dir"
-    mkdir -p ~/.ssh/conf.d
+    if [ ! -d "$ssh_conf_dir" ]; then
+        myenv_log_info "SSH 設定用のディレクトリを作成します: $ssh_conf_dir"
+        mkdir -p "$ssh_conf_dir"
+    fi
 
-    myenv_log_info "GitHub 用の SSH 設定を生成します。"
-    ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_github
+    if [ -f "$github_key" ]; then
+        myenv_log_info "GitHub 用の SSH キーは既に存在します: $github_key"
+        return 0
+    fi
+
+    myenv_log_info "GitHub 用の SSH キーを生成します"
+    ssh-keygen -t ed25519 -f "$github_key"
 }
 
 myenv_init() {
