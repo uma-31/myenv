@@ -33,3 +33,6 @@ requirements:
   - name: peco
   - name: tree
   - name: zsh
+    installation:
+      ubuntu:
+        type: apt
