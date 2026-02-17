@@ -3,6 +3,7 @@ test/**
 README.md
 
 {{- if eq .chezmoi.os "windows" }}
+# Windows: すべてを無視して必要なものだけ許可
 **/*
 
 !.chezmoiscripts/init.ps1
@@ -14,4 +15,6 @@ README.md
 !.ssh
 !.ssh/*
 !.gitconfig
-{{- end}}
+{{- else }}
+.chezmoiscripts/init.ps1
+{{- end }}
