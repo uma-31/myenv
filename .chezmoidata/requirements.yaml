@@ -9,7 +9,6 @@ default:
 requirements:
   - name: bat
   - name: fzf
-  - name: gh
   - name: glances
   - name: gpg
   - name: httpie
