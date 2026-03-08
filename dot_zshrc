@@ -24,6 +24,9 @@ zplug 'wfxr/forgit'
 # mise activation
 eval "$(mise activate zsh)"
 
+# git wt activation
+eval "$(git wt --init zsh)"
+
 # load other scripts
 declare zshrc_dir="$HOME/.zsh/rc"
 if [[ ! -f "$HOME/.zsh/completions/_mise" ]]; then
