@@ -1,6 +1,8 @@
 alias c='clear'
 
-alias bat='batcat'
+if command -v batcat &> /dev/null; then
+    alias bat='batcat'
+fi
 alias ls='eza'
 
 alias lzd='lazydocker'
