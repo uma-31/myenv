@@ -45,3 +45,8 @@ install_brew_packages() {
     myenv_log_info "Homebrew のパッケージをインストールします: $*"
     brew install "$@"
 }
+
+install_brew_cask_packages() {
+    myenv_log_info "Homebrew Cask のパッケージをインストールします: $*"
+    brew install --cask "$@"
+}

@@ -14,6 +14,7 @@ myenv_log_info "パッケージをインストールします"
 
 {{- $aptPackages := list }}
 {{- $brewPackages := list }}
+{{- $brewCaskPackages := list }}
 
 {{- range .requirements }}
 {{-   $install := dict }}
@@ -35,7 +36,11 @@ add_apt_third_party_repository \
 {{-     else if eq $install.type "apt" }}
 {{-       $aptPackages = append $aptPackages .name }}
 {{-     else if eq $install.type "brew" }}
-{{-       $brewPackages = append $brewPackages .name }}
+{{-       if and (hasKey $install "options") $install.options.cask }}
+{{-         $brewCaskPackages = append $brewCaskPackages .name }}
+{{-       else }}
+{{-         $brewPackages = append $brewPackages .name }}
+{{-       end }}
 {{-     end }}
 {{-   end }}
 {{- end }}
@@ -46,6 +51,10 @@ install_apt_packages {{ join " " $aptPackages }}
 
 {{- if $brewPackages }}
 install_brew_packages {{ join " " $brewPackages }}
+{{- end }}
+
+{{- if $brewCaskPackages }}
+install_brew_cask_packages {{ join " " $brewCaskPackages }}
 {{- end }}
 
 myenv_log_info "パッケージのインストールが完了しました"
