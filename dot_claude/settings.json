@@ -1,5 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "language": "japanese",
   "permissions": {
     "allow": [],
     "deny": [
@@ -7,11 +11,14 @@
       "Bash(rm -rf ~)",
       "Bash(rm -rf ~/*)",
       "Bash(rm -rf /*)",
-      "Bash(sudo rm:*)"
-    ]
+      "Bash(sudo rm:*)",
+      "Read(*.env)"
+    ],
+    "defaultMode": "default"
   },
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-  },
-  "language": "japanese"
+  "statusLine": {
+    "type": "command",
+    "command": "pnpx ccstatusline@latest",
+    "padding": 0
+  }
 }
