@@ -25,7 +25,13 @@
         "backgroundColor": "bgBrightBlue"
       }
     ],
-    []
+    [
+      {
+        "id": "e368babf-6341-4c07-8e5e-06096f3d895a",
+        "type": "git-changes",
+        "backgroundColor": "bgBrightYellow"
+      }
+    ]
   ],
   "flexMode": "full-minus-40",
   "compactThreshold": 60,
@@ -45,7 +51,7 @@
     "endCaps": [
       ""
     ],
-    "theme": "tokyonight",
+    "theme": "onedark",
     "autoAlign": false
   }
 }
