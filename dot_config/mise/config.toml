@@ -10,5 +10,9 @@ go = "latest"
 lazydocker = "latest"
 neovim = "stable"
 node = "latest"
+"npm:ctx7" = "latest"
 usage = "latest"
 zoxide = "latest"
+
+[settings.npm]
+package_manager = "pnpm"
