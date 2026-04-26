@@ -1,0 +1,9 @@
+name: uma
+version: 1.0.0
+description: APM project for uma
+author: uMa
+dependencies:
+  apm:
+  - upstash/context7/skills/context7-cli
+  mcp: []
+scripts: {}
