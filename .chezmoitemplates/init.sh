@@ -23,6 +23,11 @@ __install_mise_tools() {
     mise install
 }
 
+__install_apm_modules() {
+    myenv_log_info "apm による AI エージェント向けパッケージのインストールを行います"
+    apm install --global --target claude
+}
+
 __setup_zsh_as_login_shell() {
     local zsh_path
     zsh_path="$(command -v zsh)"
@@ -58,6 +63,7 @@ myenv_init() {
 
     __remove_bootstrap_chezmoi
     __install_mise_tools
+    __install_apm_modules
     __setup_zsh_as_login_shell
     __setup_ssh_config
     myenv_log_info "セットアップが完了しました！${LF}シェルを再起動してください。"
