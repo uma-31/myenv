@@ -24,7 +24,9 @@ myenv_log_info "パッケージをインストールします"
 {{-     $install = index $.default.requirements.installation $targetOS }}
 {{-   end }}
 {{-   if $install }}
-{{-     if eq $install.type "apt-community" }}
+{{-     if eq $install.type "skip" }}
+myenv_log_warn "{{ .name }} のインストールをスキップします"
+{{-     else if eq $install.type "apt-community" }}
 add_apt_third_party_repository \
     "{{ .name }}" \
     "{{ $install.repository }}" \

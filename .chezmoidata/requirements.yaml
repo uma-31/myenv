@@ -33,5 +33,7 @@ requirements:
   - name: tree
   - name: zsh
     installation:
+      mac:
+        type: skip
       ubuntu:
         type: apt
