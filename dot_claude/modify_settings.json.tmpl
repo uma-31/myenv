@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# 現在のファイルの内容が与えられるが、独自設定は settings.local.json で管理するので破棄する
+cat > /dev/null
+
+base_setting='{{ include ".chezmoitemplates/base-claude-code-settings.json" | trim }}'
+
+local_setting_file="$HOME/.claude/settings.local.json"
+if [ -f "$local_setting_file" ]; then
+  echo "$base_setting" | jq -s '.[0] * .[1]' - "$local_setting_file"
+else
+  echo "$base_setting"
+fi
