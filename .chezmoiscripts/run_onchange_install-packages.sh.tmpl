@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-{{ template "utils.sh" . }}
-{{ template "package-installer.sh" . }}
+{{ template "lib/utils.sh" . }}
+{{ template "lib/package-installer.sh" . }}
 
 {{- $targetOS := .chezmoi.config.data.targetOS }}
 
