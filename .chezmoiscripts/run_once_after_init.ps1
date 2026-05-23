@@ -17,6 +17,7 @@ scoop install git
 scoop install neovim
 
 scoop bucket add extras
+scoop install extras/obsidian
 scoop install extras/vscode
 scoop install extras/wezterm
 
