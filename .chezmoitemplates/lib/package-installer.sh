@@ -34,6 +34,13 @@ add_apt_third_party_repository() {
         sudo tee "$list_file" >/dev/null
 }
 
+add_apt_ppa_repository() {
+    local ppa="$1"
+
+    myenv_log_info "PPA を追加します: $ppa"
+    sudo add-apt-repository -y "$ppa"
+}
+
 install_apt_packages() {
     myenv_log_info "apt のパッケージリストを更新します"
     sudo apt update

@@ -11,6 +11,13 @@ requirements:
   - name: fzf
   - name: glances
   - name: gpg
+  - name: helix
+    installation:
+      mac:
+        type: brew
+      ubuntu:
+        type: apt-ppa
+        repository: ppa:maveonair/helix-editor
   - name: httpie
   - name: jq
   - name: make
@@ -19,7 +26,7 @@ requirements:
       mac:
         type: brew
       ubuntu:
-        type: apt-community
+        type: apt-repo
         repository: https://mise.jdx.dev/deb
         components:
           - stable
