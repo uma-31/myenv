@@ -20,6 +20,7 @@ requirements:
         repository: ppa:maveonair/helix-editor
   - name: httpie
   - name: jq
+  - name: lazygit
   - name: make
   - name: mise
     installation:

@@ -6,5 +6,6 @@ fi
 alias ls='eza'
 
 alias lzd='lazydocker'
+alias lzg='lazygit'
 alias tm='glances'
 alias difit="pnpx difit"
