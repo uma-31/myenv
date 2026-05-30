@@ -26,15 +26,6 @@ myenv_log_info "パッケージをインストールします"
 {{-   if $install }}
 {{-     if eq $install.type "skip" }}
 myenv_log_warn "{{ .name }} のインストールをスキップします"
-{{-     else if eq $install.type "apt-repo" }}
-add_apt_third_party_repository \
-    "{{ .name }}" \
-    "{{ $install.repository }}" \
-    "{{ join " " $install.components }}" \
-    "{{ (index $install.options "gpg-key").source }}" \
-    "{{ (index $install.options "gpg-key").dest }}" \
-    "{{ if $install.options.arch }}yes{{ else }}no{{ end }}"
-{{-       $aptPackages = append $aptPackages .name }}
 {{-     else if eq $install.type "apt-ppa" }}
 add_apt_ppa_repository "{{ $install.repository }}"
 {{-       $aptPackages = append $aptPackages .name }}

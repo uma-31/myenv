@@ -27,16 +27,8 @@ requirements:
       mac:
         type: brew
       ubuntu:
-        type: apt-repo
-        repository: https://mise.jdx.dev/deb
-        components:
-          - stable
-          - main
-        options:
-          gpg-key:
-            source: https://mise.jdx.dev/gpg-key.pub
-            dest: /etc/apt/keyrings/mise-archive-keyring.pub
-          arch: true
+        type: apt-ppa
+        repository: ppa:jdxcode/mise
   - name: peco
   - name: tree
   - name: zsh
