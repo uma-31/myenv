@@ -12,6 +12,8 @@ node = "latest"
 "npm:ctx7" = "latest"
 usage = "latest"
 zoxide = "latest"
+stylua = "latest"
+helix = "latest"
 
 [settings.npm]
 package_manager = "pnpm"
