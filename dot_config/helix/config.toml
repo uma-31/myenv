@@ -2,3 +2,6 @@ theme = "github_dark_dimmed"
 
 [editor]
 mouse = false
+
+[editor.file-picker]
+hidden = false
