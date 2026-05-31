@@ -31,6 +31,8 @@ chezmoi apply
 
 #### Windows
 
+管理者としてターミナルを起動し、下記のコマンドを実行する。
+
 ```PowerShell
 cd ~
 
