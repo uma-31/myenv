@@ -14,11 +14,10 @@ else {
 ## パッケージ・バケットのインストール
 scoop install chezmoi
 scoop install git
-scoop install neovim
+scoop install helix
 
 scoop bucket add extras
 scoop install extras/obsidian
-scoop install extras/vscode
 scoop install extras/wezterm
 
 # SSH
