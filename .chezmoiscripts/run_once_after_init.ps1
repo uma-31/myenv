@@ -17,6 +17,7 @@ scoop install git
 scoop install helix
 
 scoop bucket add extras
+scoop install extras/lazygit
 scoop install extras/obsidian
 scoop install extras/wezterm
 
