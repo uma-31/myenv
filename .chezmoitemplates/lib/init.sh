@@ -25,7 +25,7 @@ __install_mise_tools() {
 
 __install_apm_modules() {
     myenv_log_info "apm による AI エージェント向けパッケージのインストールを行います"
-    apm install --global --target claude
+    mise exec -- apm install --global --target claude
 }
 
 __setup_zsh_as_login_shell() {
