@@ -3,7 +3,7 @@ FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Tokyo
 
-RUN apt-get update && apt-get install -y curl git sudo locales && \
+RUN apt-get update && apt-get install -y curl git sudo locales software-properties-common && \
     locale-gen ja_JP.UTF-8
 
 ENV LANG=ja_JP.UTF-8
