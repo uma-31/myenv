@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 
 -- 外観設定
 config.color_scheme = "Tokyo Night Storm"
-config.font = wezterm.font("HackGen Console NF")
+config.font = wezterm.font("UDEV Gothic 35NFLG")
 
 -- カーソル設定
 config.cursor_blink_rate = 800

@@ -12,6 +12,10 @@
 
 特になし
 
+### 共通
+
+- [UDEV Gothic](https://github.com/yuru7/udev-gothic) がインストールされていること
+
 ## 使い方
 
 ### セットアップ
