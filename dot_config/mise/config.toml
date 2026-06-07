@@ -17,7 +17,9 @@ gh                            = "latest"
 helix = "latest"
 
 # --- LSP / Linter / Formatter ---
+biome = "latest"
 marksman = "latest"
+"npm:vscode-json-languageserver" = "latest"
 stylua   = "latest"
 
 # --- Dev tools ---

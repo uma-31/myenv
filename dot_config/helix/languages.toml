@@ -1,0 +1,14 @@
+[language-server.vscode-json-languageserver]
+command = "vscode-json-languageserver"
+args = [ "--stdio" ]
+
+[language-server.vscode-json-languageserver.config.json]
+validate = { enable = true }
+schemas = [
+  { fileMatch = [ "biome.json", "biome.jsonc", ".biome.json", ".biome.jsonc" ], url = "https://biomejs.dev/schemas/latest/schema.json" }
+]
+
+[[language]]
+name = "json"
+language-servers = [ "vscode-json-languageserver" ]
+formatter = { command = "biome", args = [ "check", "--write", "--stdin-file-path=%{buffer_name}" ] }
