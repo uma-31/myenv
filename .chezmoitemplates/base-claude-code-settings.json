@@ -17,6 +17,7 @@
     "ask": ["Bash(sudo:*)"],
     "defaultMode": "default"
   },
+  "editorMode": "vim",
   "statusLine": {
     "type": "command",
     "command": "pnpx ccstatusline@latest",
