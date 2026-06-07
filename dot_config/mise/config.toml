@@ -1,20 +1,33 @@
 [tools]
-atuin = "latest"
-chezmoi = "latest"
-claude-code = "latest"
-eza = "latest"
-gh = "latest"
-"github:microsoft/apm" = "latest"
+# --- Runtimes ---
 go = "latest"
-"go:github.com/k1LoW/git-wt" = "latest"
-lazydocker = "latest"
 node = "latest"
-"npm:ctx7" = "latest"
-usage = "latest"
-zoxide = "latest"
-stylua = "latest"
+
+# --- Shell environment ---
+atuin   = "latest"
+chezmoi = "latest"
+eza     = "latest"
+zoxide  = "latest"
+
+# --- Git / GitHub ---
+gh                            = "latest"
+"go:github.com/k1LoW/git-wt" = "latest"
+
+# --- Editor ---
 helix = "latest"
+
+# --- LSP / Linter / Formatter ---
 marksman = "latest"
+stylua   = "latest"
+
+# --- Dev tools ---
+lazydocker = "latest"
+"npm:ctx7" = "latest"
+usage      = "latest"
+
+# --- AI ---
+claude-code            = "latest"
+"github:microsoft/apm" = "latest"
 
 [settings.npm]
 package_manager = "pnpm"
