@@ -22,4 +22,7 @@ README.md
 {{- else }}
 .chezmoiscripts/init.ps1
 AppData
+{{- if ne .chezmoi.os "darwin" }}
+.zsh/rc/mac.zshrc
+{{- end }}
 {{- end }}
