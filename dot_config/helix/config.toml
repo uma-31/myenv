@@ -17,3 +17,6 @@ enable = true
 [editor.whitespace.render]
 space = "all"
 tab = "all"
+
+[keys.normal.space]
+m = ":pipe-to ~/.config/helix/actions/preview-mermaid.sh"
