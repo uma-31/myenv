@@ -4,13 +4,13 @@ go = "latest"
 node = "latest"
 
 # --- Shell environment ---
-atuin   = "latest"
+atuin = "latest"
 chezmoi = "latest"
-eza     = "latest"
-zoxide  = "latest"
+eza = "latest"
+zoxide = "latest"
 
 # --- Git / GitHub ---
-gh                            = "latest"
+gh = "latest"
 "go:github.com/k1LoW/git-wt" = "latest"
 
 # --- Editor ---
@@ -20,16 +20,18 @@ helix = "latest"
 biome = "latest"
 marksman = "latest"
 "npm:vscode-json-languageserver" = "latest"
-stylua   = "latest"
+stylua = "latest"
+tombi = "latest"
 
 # --- Dev tools ---
 lazydocker = "latest"
 "npm:ctx7" = "latest"
-usage      = "latest"
+usage = "latest"
 
 # --- AI ---
-claude-code            = "latest"
+claude-code = "latest"
 "github:microsoft/apm" = "latest"
+"npm:ccusage" = "latest"
 
 [settings.npm]
 package_manager = "pnpm"
