@@ -1,0 +1,9 @@
+[[schemas]]
+path = "https://mise.en.dev/schema/mise.json"
+include = [
+  "**/mise.toml",
+  "**/mise.local.toml",
+  "**/mise/config.toml",
+  "**/.mise/config.toml",
+  "**/.config/mise/conf.d/*.toml"
+]
