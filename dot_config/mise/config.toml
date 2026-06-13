@@ -26,6 +26,7 @@ tombi = "latest"
 # --- Dev tools ---
 lazydocker = "latest"
 "npm:ctx7" = "latest"
+"npm:difit" = "latest"
 usage = "latest"
 
 # --- AI ---
