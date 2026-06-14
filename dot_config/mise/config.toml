@@ -18,6 +18,7 @@ helix = "latest"
 
 # --- LSP / Linter / Formatter ---
 biome = "latest"
+"go:github.com/docker/docker-language-server/cmd/docker-language-server" = "latest"
 marksman = "latest"
 "npm:vscode-json-languageserver" = "latest"
 stylua = "latest"

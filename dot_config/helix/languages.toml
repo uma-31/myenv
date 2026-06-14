@@ -1,3 +1,7 @@
+[language-server.docker-language-server]
+command = "docker-language-server"
+args = ["start", "--stdio"]
+
 [language-server.vscode-json-languageserver]
 command = "vscode-json-languageserver"
 args = ["--stdio"]
@@ -7,6 +11,23 @@ validate = { enable = true }
 schemas = [
   { fileMatch = ["biome.json", "biome.jsonc", ".biome.json", ".biome.jsonc"], url = "https://biomejs.dev/schemas/latest/schema.json" }
 ]
+
+[language-server.yaml-language-server]
+# yaml-language-serverはPhantom Dependencyを持つため、
+# pnpmによるグローバルインストールで正しく動作しない。
+# 問題が解消され次第、miseでのインストールに切り替えてデフォルトの設定を使うようにする。
+command = "pnpm"
+args = ["dlx", "yaml-language-server", "--stdio"]
+
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-language-server"]
+
+[[language]]
+name = "docker-compose"
+language-id = "dockercompose"
+language-servers = ["yaml-language-server", "docker-language-server"]
+auto-format = true
 
 [[language]]
 name = "json"
