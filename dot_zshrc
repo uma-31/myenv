@@ -52,3 +52,6 @@ zplug load
 # enable autocomplete
 fpath+=("$HOME/.zsh/completions")
 autoload -Uz compinit && compinit
+
+# set helix as the default editor
+export EDITOR=hx
