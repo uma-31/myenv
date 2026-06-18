@@ -30,8 +30,8 @@ tombi = "latest"
 lazydocker = "latest"
 "npm:ctx7" = "latest"
 "npm:difit" = "latest"
-superfile = "latest"
 usage = "latest"
+yazi = "latest"
 
 # --- AI ---
 claude-code = "latest"
