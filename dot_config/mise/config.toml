@@ -32,7 +32,7 @@ lazydocker = "latest"
 "npm:ctx7" = "latest"
 "npm:difit" = "latest"
 usage = "latest"
-yazi = "latest"
+yazi = { version = "latest", postinstall = "ya pkg install" }
 
 # --- AI ---
 claude-code = "latest"
