@@ -2,6 +2,9 @@
 command = "docker-language-server"
 args = ["start", "--stdio"]
 
+[language-server.sqls]
+command = "sqls"
+
 [language-server.vscode-json-languageserver]
 command = "vscode-json-languageserver"
 args = ["--stdio"]
@@ -37,6 +40,10 @@ formatter = { command = "biome", args = [
   "--write",
   "--stdin-file-path=%{buffer_name}"
 ] }
+
+[[language]]
+name = "sql"
+language-servers = ["sqls"]
 
 [[language]]
 name = "toml"
