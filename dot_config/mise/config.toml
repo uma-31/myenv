@@ -36,6 +36,7 @@ yazi = { version = "latest", postinstall = "ya pkg install" }
 
 # --- AI ---
 claude-code = "latest"
+codex = "latest"
 "github:microsoft/apm" = "latest"
 "npm:ccusage" = "latest"
 
