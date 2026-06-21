@@ -12,4 +12,4 @@ docker run --rm \
   -o chart.png 2>/dev/null
 
 wezterm cli spawn --new-window -- \
-  zsh -lc "wezterm imgcat '$dir/chart.png'; echo; echo 'Press any key to close...'; read -k1"
+  zsh -lc "cd ~; wezterm imgcat '$dir/chart.png'; echo; echo 'Press any key to close...'; read -k1"
