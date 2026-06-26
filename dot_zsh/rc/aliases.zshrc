@@ -5,3 +5,4 @@ fi
 alias lzd='lazydocker'
 alias lzg='lazygit'
 alias tm='glances'
+alias y='yazi'
