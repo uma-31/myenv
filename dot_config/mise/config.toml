@@ -32,6 +32,7 @@ tombi = "latest"
 lazydocker = "latest"
 "npm:ctx7" = "latest"
 "npm:difit" = "latest"
+resvg = "latest"
 usage = "latest"
 yazi = { version = "latest", postinstall = "ya pkg install" }
 
