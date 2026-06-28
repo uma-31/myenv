@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -eu
+
+dir="$HOME/.cache/helix-custom-actions"
+mkdir -p "$dir"
+
+docker run --rm \
+  -u "$(id -u):$(id -g)" \
+  -v "$dir:/data" \
+  -i minlag/mermaid-cli \
+  -i - \
+  -o chart.png 2>/dev/null
+
+{{ if eq .targetOS "mac" -}}
+open "$dir/chart.png"
+{{- else if eq .targetOS "windows" -}}
+explorer "$dir/chart.png"
+{{- else if eq .targetOS "ubuntu" -}}
+xdg-open "$dir/chart.png"
+{{- else -}}
+echo "Unsupported OS: {{ .targetOS }}" >&2; exit 1
+{{- end }}
