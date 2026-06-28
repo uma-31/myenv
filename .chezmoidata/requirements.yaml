@@ -24,6 +24,12 @@ requirements:
         repository: ppa:jdxcode/mise
   - name: peco
   - name: tree
+  - name: xdg-utils
+    installation:
+      mac:
+        type: skip
+      ubuntu:
+        type: apt
   - name: zsh
     installation:
       mac:
