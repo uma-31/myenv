@@ -19,6 +19,7 @@ scoop install helix
 scoop bucket add extras
 scoop install extras/lazygit
 scoop install extras/obsidian
+scoop install extras/powertoys
 scoop install extras/wezterm
 
 # SSH
