@@ -2,6 +2,8 @@
 set -eu
 
 dir="$HOME/.cache/helix-custom-actions"
+file_name="chart.svg"
+
 mkdir -p "$dir"
 
 docker run --rm \
@@ -9,14 +11,14 @@ docker run --rm \
   -v "$dir:/data" \
   -i minlag/mermaid-cli \
   -i - \
-  -o chart.png 2>/dev/null
+  -o "$file_name" 2>/dev/null
 
 {{ if eq .targetOS "mac" -}}
-open "$dir/chart.png"
+open "$dir/$file_name"
 {{- else if eq .targetOS "windows" -}}
-explorer "$dir/chart.png"
+explorer "$dir/$file_name"
 {{- else if eq .targetOS "ubuntu" -}}
-xdg-open "$dir/chart.png"
+xdg-open "$dir/$file_name"
 {{- else -}}
 echo "Unsupported OS: {{ .targetOS }}" >&2; exit 1
 {{- end }}
