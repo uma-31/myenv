@@ -42,5 +42,8 @@ codex = "latest"
 "github:microsoft/apm" = "latest"
 "npm:ccusage" = "latest"
 
+[settings]
+minimum_release_age = "3d"
+
 [settings.npm]
 package_manager = "pnpm"
