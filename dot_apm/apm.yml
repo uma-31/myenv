@@ -2,6 +2,9 @@ name: uma
 version: 1.0.0
 description: APM project for uma
 author: uMa
+targets:
+  - claude
+  - codex
 dependencies:
   apm:
   - upstash/context7/skills/context7-cli
