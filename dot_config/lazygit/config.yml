@@ -1,0 +1,19 @@
+customCommands:
+  - key: "C"
+    context: "localBranches"
+    description: "不要ブランチの掃除"
+    loadingText: "Cleaning up branches..."
+    output: popup
+    prompts:
+      - type: "confirm"
+        title: "不要ブランチの掃除"
+        body: "リモートが削除された(upstreamが[gone]であるような)ローカルブランチを削除します。よろしいですか?"
+    command: |
+      git fetch -p && \
+      gone=$(git for-each-ref --format '%(refname:short) %(upstream:track)' refs/heads \
+        | awk '$2=="[gone]"{print $1}') && \
+      if [ -z "$gone" ]; then \
+        echo "削除対象のブランチはありません。"; \
+      else \
+        echo "$gone" | xargs -n1 git branch -D; \
+      fi
