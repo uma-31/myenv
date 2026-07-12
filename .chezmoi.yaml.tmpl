@@ -7,11 +7,17 @@
 {{-   $targetOS = "ubuntu" }}
 {{- end }}
 
+{{- $isWSL := false }}
+{{- if eq .chezmoi.os "linux" }}
+{{-   $isWSL = contains "wsl" (.chezmoi.kernel.osrelease | lower) }}
+{{- end }}
+
 {{- $userName := promptStringOnce . "user.name" "User name" "uMa" -}}
 {{- $userEmail := promptStringOnce . "user.email" "Email address" "ysmst35@gmail.com" }}
 
 data:
   targetOS: {{ $targetOS }}
+  isWSL: {{ $isWSL }}
   user:
     name: {{ $userName | quote }}
     email: {{ $userEmail | quote }}

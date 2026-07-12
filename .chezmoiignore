@@ -25,4 +25,7 @@ AppData
 {{- if ne .chezmoi.os "darwin" }}
 .zsh/rc/mac.zshrc
 {{- end }}
+{{- if not .isWSL }}
+.zsh/rc/wsl.zshrc
+{{- end }}
 {{- end }}
