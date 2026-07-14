@@ -12,7 +12,9 @@ args = ["--stdio"]
 [language-server.vscode-json-languageserver.config.json]
 validate = { enable = true }
 schemas = [
-  { fileMatch = ["biome.json", "biome.jsonc", ".biome.json", ".biome.jsonc"], url = "https://biomejs.dev/schemas/latest/schema.json" }
+  { fileMatch = ["biome.json", "biome.jsonc", ".biome.json", ".biome.jsonc"], url = "https://biomejs.dev/schemas/latest/schema.json" },
+  { fileMatch = ["package.json"], url = "https://www.schemastore.org/package.json" },
+  { fileMatch = ["tsconfig.json"], url = "https://www.schemastore.org/tsconfig.json" }
 ]
 
 [language-server.yaml-language-server]
