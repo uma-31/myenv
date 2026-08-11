@@ -42,6 +42,10 @@ pnpm = "latest"
 "npm:vscode-json-languageserver" = "latest"
 "npm:typescript-language-server" = "latest"
 
+# --- Python --
+uv = "latest"
+ruff = "latest"
+
 # --- Lua ---
 lua-language-server = "latest"
 
@@ -53,7 +57,6 @@ stylua = "latest"
 marksman = "latest"
 "npm:graphql-language-service-cli" = "latest"
 tombi = "latest"
-uv = "latest"
 
 # =========================
 # 3. DEVELOPMENT TOOLS

@@ -44,6 +44,11 @@ formatter = { command = "biome", args = [
 ] }
 
 [[language]]
+name = "python"
+language-servers = ["ruff"]
+auto-format = true
+
+[[language]]
 name = "sql"
 language-servers = ["sqls"]
 
