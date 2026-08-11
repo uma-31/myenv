@@ -53,6 +53,7 @@ stylua = "latest"
 marksman = "latest"
 "npm:graphql-language-service-cli" = "latest"
 tombi = "latest"
+uv = "latest"
 
 # =========================
 # 3. DEVELOPMENT TOOLS
