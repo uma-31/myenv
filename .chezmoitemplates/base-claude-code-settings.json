@@ -14,8 +14,7 @@
       "Bash(sudo rm:*)",
       "Read(*.env)"
     ],
-    "ask": ["Bash(sudo:*)"],
-    "defaultMode": "default"
+    "ask": ["Bash(sudo:*)"]
   },
   "editorMode": "vim",
   "statusLine": {
